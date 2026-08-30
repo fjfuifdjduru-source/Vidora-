@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vidora - Premium Videos</title>
+
+  <title>Welcome to Vidora</title>
+  <meta name="description" content="Vidora - Information, analysis and original video content.">
 
   <style>
     * {
@@ -14,122 +16,152 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #0b0d12;
       color: white;
+      background: #0b1110;
+      min-height: 100vh;
+    }
+
+    /* Nature background */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.72)),
+        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.12);
     }
 
     header {
-      padding: 18px 20px;
-      background: #11141c;
-      border-bottom: 1px solid #292d38;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      padding: 20px;
+      text-align: center;
+      background: rgba(10, 15, 14, 0.72);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.15);
     }
 
     .logo {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
-      color: #ffffff;
+      letter-spacing: 2px;
     }
 
     .hero {
-      padding: 55px 20px;
+      min-height: 55vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      background: linear-gradient(180deg, #171b28, #0b0d12);
+      padding: 70px 20px;
     }
 
     .hero h1 {
-      font-size: 38px;
-      margin-bottom: 15px;
+      font-size: 46px;
+      margin-bottom: 18px;
+      text-shadow: 0 3px 15px rgba(0,0,0,0.5);
     }
 
     .hero p {
-      color: #b8bdc9;
-      font-size: 16px;
-      line-height: 1.6;
+      max-width: 650px;
+      color: #e2e2e2;
+      font-size: 18px;
+      line-height: 1.7;
     }
 
     .section {
-      padding: 30px 18px;
       max-width: 900px;
-      margin: auto;
+      margin: 30px auto;
+      padding: 35px 22px;
     }
 
-    .section h2 {
-      font-size: 25px;
-      margin-bottom: 20px;
+    .box {
+      background: rgba(10, 14, 13, 0.82);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 18px;
+      padding: 30px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.25);
     }
 
-    .card {
-      background: #151922;
-      border: 1px solid #292e3a;
-      border-radius: 15px;
-      padding: 20px;
+    .box h2 {
+      font-size: 28px;
       margin-bottom: 18px;
     }
 
-    .card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
+    .box p {
+      color: #e0e0e0;
+      font-size: 17px;
+      line-height: 1.8;
     }
 
-    .card p {
-      color: #aeb4c0;
-      line-height: 1.5;
-      margin-bottom: 15px;
+    .app {
+      text-align: center;
+      margin-top: 25px;
     }
 
-    .price {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 15px;
+    .app h2 {
+      margin-bottom: 12px;
     }
 
-    .btn {
+    .app p {
+      margin-bottom: 22px;
+    }
+
+    .button {
       display: inline-block;
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 10px;
-      background: #ffffff;
-      color: #0b0d12;
-      font-size: 16px;
-      font-weight: bold;
+      padding: 15px 30px;
+      background: white;
+      color: #111;
       text-decoration: none;
-      text-align: center;
-      cursor: pointer;
+      border-radius: 11px;
+      font-weight: bold;
+      font-size: 16px;
     }
 
-    .app-box {
-      text-align: center;
-      background: #151922;
-      border: 1px solid #292e3a;
-      border-radius: 15px;
-      padding: 25px 20px;
+    .button:hover {
+      opacity: 0.9;
     }
 
-    .app-box p {
-      color: #aeb4c0;
-      margin: 12px 0 20px;
-      line-height: 1.5;
+    .note {
+      margin-top: 15px;
+      font-size: 13px !important;
+      color: #aeb4b0 !important;
     }
 
     footer {
       text-align: center;
-      padding: 30px 15px;
-      color: #777e8c;
-      border-top: 1px solid #292d38;
-      margin-top: 20px;
+      padding: 35px 20px;
+      margin-top: 40px;
+      background: rgba(5, 8, 7, 0.8);
+      color: #aeb4b0;
+      border-top: 1px solid rgba(255,255,255,0.12);
     }
 
-    @media (min-width: 600px) {
+    @media (max-width: 600px) {
       .hero h1 {
-        font-size: 48px;
+        font-size: 35px;
       }
 
-      .card {
-        padding: 25px;
+      .hero p {
+        font-size: 16px;
+      }
+
+      .box {
+        padding: 24px 20px;
+      }
+
+      .box h2 {
+        font-size: 24px;
       }
     }
   </style>
@@ -138,66 +170,65 @@
 <body>
 
   <header>
-    <div class="logo">Vidora</div>
+    <div class="logo">VIDORA</div>
   </header>
 
   <section class="hero">
     <h1>Welcome to Vidora</h1>
+
     <p>
-      Exclusive videos aur premium content ek hi jagah.
-      Apne favourite content ko explore karein.
+      Discover original videos, information and analysis
+      on topics that matter.
     </p>
   </section>
 
+
   <section class="section">
-    <h2>🎬 Premium Videos</h2>
 
-    <div class="card">
-      <h3>Premium Video 01</h3>
+    <div class="box">
+
+      <h2>Information</h2>
+
       <p>
-        Is video mein kya seekhne/dekhne ko milega,
-        uska short description yahan hoga.
+        यह वीडियो सरकारी नीतियों, सार्वजनिक मुद्दों और शासन
+        से जुड़े विषयों पर जानकारी और विश्लेषण प्रस्तुत करता है।
+        इसका उद्देश्य दर्शकों को विभिन्न मुद्दों को समझने और
+        उपलब्ध जानकारी के आधार पर अपनी राय बनाने में मदद करना है।
       </p>
 
-      <div class="price">₹49</div>
-
-      <a href="#" class="btn">Unlock Video</a>
-    </div>
-
-    <div class="card">
-      <h3>Premium Video 02</h3>
-      <p>
-        Video ka topic aur basic information
-        yahan show hogi.
-      </p>
-
-      <div class="price">₹49</div>
-
-      <a href="#" class="btn">Unlock Video</a>
     </div>
 
   </section>
 
-  <section class="section">
-    <h2>📱 Vidora App</h2>
 
-    <div class="app-box">
-      <h3>Vidora App Download</h3>
+  <section class="section">
+
+    <div class="box app">
+
+      <h2>Get the Vidora App</h2>
 
       <p>
-        Vidora ka app download karke
-        premium content ko easily access karein.
+        Download the official Vidora app to explore
+        our video content and information.
       </p>
 
-      <!-- Yahan baad mein actual APK download link lagayenge -->
-      <a href="#" class="btn">Download App</a>
+      <!-- Actual app link will be added after the app is created -->
+      <a href="#" class="button">
+        Install Vidora App
+      </a>
+
+      <p class="note">
+        The official app download link will be available here soon.
+      </p>
+
     </div>
 
   </section>
+
 
   <footer>
     © 2026 Vidora. All rights reserved.
   </footer>
 
 </body>
-</html>
+  </html>
