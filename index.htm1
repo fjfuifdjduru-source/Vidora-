@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidora - Premium Videos</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f14;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #171720;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #bbbbbb;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: #ffffff;
+      color: #111111;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #191922;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #888888;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">VIDORA</div>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Vidora</h1>
+    <p>Original videos aur premium content ek hi jagah.</p>
+    <a href="#premium" class="button">Explore Premium</a>
+  </section>
+
+  <section class="section">
+    <h2>Free Preview</h2>
+
+    <div class="card">
+      <h3>Coming Soon</h3>
+      <p>Yahan tumhari free preview video ka topic aur information hogi.</p>
+    </div>
+  </section>
+
+  <section class="section" id="premium">
+    <h2>Premium</h2>
+
+    <div class="card">
+      <h3>Vidora App Access</h3>
+      <p>App access — ₹49</p>
+      <div class="price">₹49</div>
+    </div>
+
+    <div class="card">
+      <h3>Premium Video</h3>
+      <p>Detailed premium video — ₹49</p>
+      <div class="price">₹49</div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Vidora
+  </footer>
+
+</body>
+</html>
