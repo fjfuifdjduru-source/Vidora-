@@ -6,72 +6,131 @@
   <title>Vidora - Premium Videos</title>
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #0f0f14;
+      background: #0b0d12;
       color: white;
     }
 
     header {
-      padding: 20px;
-      text-align: center;
-      background: #171720;
+      padding: 18px 20px;
+      background: #11141c;
+      border-bottom: 1px solid #292d38;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .logo {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
+      color: #ffffff;
     }
 
     .hero {
+      padding: 55px 20px;
       text-align: center;
-      padding: 60px 20px;
+      background: linear-gradient(180deg, #171b28, #0b0d12);
     }
 
     .hero h1 {
       font-size: 38px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      color: #bbbbbb;
-      font-size: 17px;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 28px;
-      background: #ffffff;
-      color: #111111;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
+      color: #b8bdc9;
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     .section {
-      padding: 30px 20px;
+      padding: 30px 18px;
       max-width: 900px;
       margin: auto;
     }
 
+    .section h2 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
     .card {
-      background: #191922;
+      background: #151922;
+      border: 1px solid #292e3a;
+      border-radius: 15px;
       padding: 20px;
-      margin: 15px 0;
-      border-radius: 12px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aeb4c0;
+      line-height: 1.5;
+      margin-bottom: 15px;
     }
 
     .price {
       font-size: 22px;
       font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #0b0d12;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .app-box {
+      text-align: center;
+      background: #151922;
+      border: 1px solid #292e3a;
+      border-radius: 15px;
+      padding: 25px 20px;
+    }
+
+    .app-box p {
+      color: #aeb4c0;
+      margin: 12px 0 20px;
+      line-height: 1.5;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      color: #888888;
+      padding: 30px 15px;
+      color: #777e8c;
+      border-top: 1px solid #292d38;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 600px) {
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .card {
+        padding: 25px;
+      }
     }
   </style>
 </head>
@@ -79,42 +138,65 @@
 <body>
 
   <header>
-    <div class="logo">VIDORA</div>
+    <div class="logo">Vidora</div>
   </header>
 
   <section class="hero">
     <h1>Welcome to Vidora</h1>
-    <p>Original videos aur premium content ek hi jagah.</p>
-    <a href="#premium" class="button">Explore Premium</a>
+    <p>
+      Exclusive videos aur premium content ek hi jagah.
+      Apne favourite content ko explore karein.
+    </p>
   </section>
 
   <section class="section">
-    <h2>Free Preview</h2>
+    <h2>🎬 Premium Videos</h2>
 
     <div class="card">
-      <h3>Coming Soon</h3>
-      <p>Yahan tumhari free preview video ka topic aur information hogi.</p>
+      <h3>Premium Video 01</h3>
+      <p>
+        Is video mein kya seekhne/dekhne ko milega,
+        uska short description yahan hoga.
+      </p>
+
+      <div class="price">₹49</div>
+
+      <a href="#" class="btn">Unlock Video</a>
     </div>
+
+    <div class="card">
+      <h3>Premium Video 02</h3>
+      <p>
+        Video ka topic aur basic information
+        yahan show hogi.
+      </p>
+
+      <div class="price">₹49</div>
+
+      <a href="#" class="btn">Unlock Video</a>
+    </div>
+
   </section>
 
-  <section class="section" id="premium">
-    <h2>Premium</h2>
+  <section class="section">
+    <h2>📱 Vidora App</h2>
 
-    <div class="card">
-      <h3>Vidora App Access</h3>
-      <p>App access — ₹49</p>
-      <div class="price">₹49</div>
+    <div class="app-box">
+      <h3>Vidora App Download</h3>
+
+      <p>
+        Vidora ka app download karke
+        premium content ko easily access karein.
+      </p>
+
+      <!-- Yahan baad mein actual APK download link lagayenge -->
+      <a href="#" class="btn">Download App</a>
     </div>
 
-    <div class="card">
-      <h3>Premium Video</h3>
-      <p>Detailed premium video — ₹49</p>
-      <div class="price">₹49</div>
-    </div>
   </section>
 
   <footer>
-    © 2026 Vidora
+    © 2026 Vidora. All rights reserved.
   </footer>
 
 </body>
